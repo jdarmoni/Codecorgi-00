@@ -6,6 +6,19 @@
         <title>Welcome | Ainulindalë</title>
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
+        <!-- <script src="app.js"></script> -->
+        <script>
+            let number = 0;
+            function eggs() {
+                if (number < 3) {
+                    number += 1
+                } else {
+                    number = 0;
+                }
+                document.getElementById('image').style = `background-image: url(./images/hero-image-${number}.jpg)`
+            }
+            setInterval(()=>eggs(), 2000)
+        </script>
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -14,12 +27,14 @@
         <header>
             <a href="./">Ainulindalë</a>
         </header>
+
         <section class="hero-image">
-            <div class="image" style="background-image: url(./images/hero-image-0.jpg)">
+            <div class="image" id="image" style="background-image: url(./images/hero-image-0.jpg)">
                 <h1>Ainulindalë</h1>
                 <h2>The Music of the Ainur</h2>
             </div>
         </section>
+
         <main>
         <blockquote cite="http://ae-lib.org.ua/texts-c/tolkien__the_silmarillion__en.htm#ainulindale">
             The Silmarillion, now published four years after the death of its author, is an
@@ -45,6 +60,16 @@
             he had yet revealed; and the glory of its beginning and the splendour of its
             end amazed the Ainur, so that they bowed before Ilúvatar and were silent.
         </p>
+        <!-- <div class="carousel-wrapper">
+            <div class="carousel">
+                <img class="carousel__photo initial" src="images/hero-image-0.jpg">
+                
+
+        
+                <div class="carousel__button--next"></div>
+                <div class="carousel__button--prev"></div>
+            </div>
+        </div> -->
         </main>
         <script src="./scripts/app.js"></script>
     </body>
