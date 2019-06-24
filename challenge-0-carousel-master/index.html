@@ -6,23 +6,15 @@
         <title>Welcome | Ainulindalë</title>
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
-        <!-- <script src="app.js"></script> -->
+        <script src="app.js"></script>
         <script>
-            let number = 0;
-            function eggs() {
-                if (number < 3) {
-                    number += 1
-                } else {
-                    number = 0;
-                }
-                document.getElementById('image').style = `background-image: url(./images/hero-image-${number}.jpg)`
-            }
-            setInterval(()=>eggs(), 2000)
+            callCarousel()
         </script>
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
     </head>
+    
     <body id="home">
         <header>
             <a href="./">Ainulindalë</a>

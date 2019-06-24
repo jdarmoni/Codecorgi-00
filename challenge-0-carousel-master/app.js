@@ -1,12 +1,13 @@
+let carouselImage = 0;
 
-function eggs(){
-    let number = 0;
-    
-    if (number < 3 ){
-        number+=1
+function eggs() {
+    if (carouselImage < 3) {
+        carouselImage += 1
     } else {
-        number = 0;
+        carouselImage = 0;
     }
-    document.getElementById('image').style=`background-image: url(./images/hero-image-${number}.jpg)`
+    document.getElementById('image').style = `background-image: url(./images/hero-image-${carouselImage}.jpg)`
 }
-setInterval('eggs()', 1000)
+function callCarousel (){
+    setInterval(() => eggs(), 2000)
+}
